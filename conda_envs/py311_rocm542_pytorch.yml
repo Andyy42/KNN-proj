@@ -1,0 +1,44 @@
+name: py311_rocm542_pytorch
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+    # Tools
+    - ipython
+    - nvtop
+    - ffmpeg
+    # Libraries
+    - python=3.11*
+    - mamba
+    - pandas
+    - numpy
+    - h5py
+    - filelock
+    - mccabe
+    - fire
+    - kaldiio=2.17.2
+    - kaldi
+    - PyYAML
+    - scipy
+    - tqdm
+    - scikit-learn
+    - matplotlib
+    - pypeln
+    - pip
+    - pip:
+      - --extra-index-url https://download.pytorch.org/whl/rocm5.4.2/
+      - pytorch-triton-rocm
+      - torch==2.0.1+rocm5.4.2
+      - torchaudio==2.0.2+rocm5.4.2
+      - torchvision==0.15.2+rocm5.4.2
+      # - --extra-index-url https://download.pytorch.org/whl/rocm6.0 
+      # - torch==2.3.0.dev20240307+rocm6.0
+      # - torchaudio==2.2.0.dev20240307+rocm6.0
+      # - torchvision==0.18.0.dev20240307+rocm6.0
+      - lmdb
+      - soundfile==0.10.3.post1
+      - tableprint
+      - torchnet==0.0.4
+      - kaldifst
+      - wandb
+

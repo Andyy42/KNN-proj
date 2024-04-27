@@ -1,0 +1,36 @@
+name: py_cuda113_torch21 
+channels:
+  - pytorch
+  - conda-forge
+  - nvidia
+dependencies:
+    # Tools
+    - ipython
+    - nvitop
+    - ffmpeg
+    # Libraries
+    - python>=3.9
+    - mamba
+    - numpy
+    - h5py
+    - nvidia::cudatoolkit
+    - pytorch::pytorch=2.1.0
+    - pytorch-cuda=12.1
+    - torchaudio=2.1.0
+    - mccabe
+    - cudatoolkit=11.3
+    - fire
+    - kaldiio=2.17.2
+    - kaldi
+    - PyYAML
+    - scipy
+    - tqdm
+    - scikit-learn
+    - matplotlib
+    - pypeln
+    - pip
+    - pip: 
+      - lmdb
+      - soundfile==0.10.3.post1
+      - tableprint
+      - torchnet==0.0.4
