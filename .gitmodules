@@ -1,3 +1,4 @@
 [submodule "utils/wespeaker"]
 	path = utils/wespeaker
 	url = https://github.com/Andyy42/wespeaker
+  branch = voxlingua/wavlm
