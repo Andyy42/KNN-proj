@@ -17,6 +17,8 @@ from tqdm import tqdm
 from pathlib import Path
 from pyannote.audio import Pipeline
 
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Create speaker labels for audio files.")
@@ -36,7 +38,8 @@ if __name__ == "__main__":
 
     os.makedirs(args.out_dir, exist_ok=True)
 
-    pipeline = Pipeline.from_pretrained("config.yaml")
+    script_path = os.path.dirname(__file__)
+    pipeline = Pipeline.from_pretrained(f"{script_path}/config.yaml")
     pipeline.to(torch.device("cuda" if torch.cuda.is_available() else "cpu"))
 
     for file in tqdm(args.files):
