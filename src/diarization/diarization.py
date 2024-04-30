@@ -57,8 +57,7 @@ if __name__ == "__main__":
             'Speaker': speakers
         })
 
-        df.to_csv(os.path.join('labels', f"{os.path.basename(
-            file).split('.')[0]}.csv"), index=False)
+        df.to_csv(os.path.join('labels', f"{os.path.basename(file).split('.')[0]}.csv"), index=False)
 
         df2 = df[['Speaker']].copy()
         df2['Duration'] = df['End [s]'] - df['Start [s]']
@@ -71,5 +70,4 @@ if __name__ == "__main__":
             df_filtered = pd.DataFrame(columns=df.columns)
         else:
             df_filtered = df.drop(df[df['Speaker'] != min_speaker_id].index)
-        df_filtered.to_csv(os.path.join('labels', f"{os.path.basename(
-            file).split('.')[0]}_unwanted.csv"), index=False)
+        df_filtered.to_csv(os.path.join('labels', f"{os.path.basename(file).split('.')[0]}_unwanted.csv"), index=False)
