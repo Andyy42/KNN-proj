@@ -1,3 +1,8 @@
+src/diarization/*.wav
+src/diarization/*/*.wav
+src/diarization/*.csv
+src/diarization/*/*.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
