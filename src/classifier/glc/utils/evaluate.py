@@ -54,7 +54,7 @@ def confusion_matrix(scores, labs, priors=None):
     """
 
     n_classes = max(labs) + 1
-    priors = np.ones(n_classes) if priors is None else np.array(prior,
+    priors = np.ones(n_classes) if priors is None else np.array(priors,
         np.double).flatten()
     labs_mx = np.zeros((len(labs), n_classes), dtype=int)
     labs_mx[range(len(labs)), labs] = 1
